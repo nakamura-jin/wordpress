@@ -1,0 +1,291 @@
+@charset "UTF-8";
+
+/*
+Theme Name: blogsite
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f5f5;
+  color: #707070;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: #707070;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  padding: 20px 0;
+  background: #fff;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+}
+
+.header__list {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.header__list li:not(:first-of-type) {
+  margin-left: 50px;
+}
+
+.firstview {
+  height: 400px;
+  background: url('./img/media__firstview.png');
+  position: relative;
+}
+
+.firstview__ttl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  color: #fff;
+  font-family: "Indie Flower", cursive;
+  font-size: 60px;
+}
+
+.firstview {
+  background: url('./img/media__firstview.png') center/cover;
+  height: 400px;
+  position: relative;
+}
+
+.firstview__eyecatch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 60px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.category__firstview {
+  background: #b43566;
+  height: 200px;
+  position: relative;
+}
+
+.container {
+  margin: 70px auto 0 ;
+  max-width: 1200px;
+  width: 90%;
+  padding-bottom: 70px;
+}
+
+.top-news__subttl {
+  font-size: 14px;
+  font-family: 'Indie Flower', cursive;
+  color: #b43566;
+}
+
+.flex__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards__wrap {
+  width: 65%;
+}
+
+.cards__contents {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.card__item {
+  width: 30%;
+  background: #fff;
+  border-radius: 15px;
+  position: relative;
+}
+
+.card__item:nth-child(n+4) {
+  margin: 30px 0 0 ;
+}
+
+.card__item-image {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.wp-post-image {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.card__item-category--name {
+  background: #b43566;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px 0 0 0;
+  color: #fff;
+  padding: 5px 20px;
+}
+
+.card__content {
+  padding: 20px;
+  margin-top: -7px;
+}
+
+.card__item-ttl {
+  margin-bottom: 20px;
+}
+
+.card__item-date {
+  font-size: 12px;
+}
+
+.sidebar {
+  width: 30%;
+}
+
+.banner__image {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.contributor {
+  margin-top: 30px;
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.contributor__icon {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background: #b43566;
+  border-radius: 50%;
+}
+
+.contributor__image {
+  width: 100%;
+  height: auto;
+}
+
+.contributor__name {
+  font-size: 22px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.category {
+  margin-top: 30px;
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.category__ttl {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.category__list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+  position: relative;
+}
+
+.category__list li a {
+  display: block;
+}
+
+.category__list li::before {
+  content: '→';
+  color: #b43566;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+footer {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #fff;
+}
+
+.copyRight {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .header__list {
+    display: none;
+  }
+
+  .firstview {
+    background: url('./img/media__firstview-sp@2x.png');
+    height: 560px;
+  }
+  .firstview__eyecatch {
+    font-size: 24px;
+  }
+
+  .flex__item {
+    flex-direction: column;
+  }
+
+  .cards__wrap {
+    width: 100%;
+  }
+
+  .cards__contents {
+    flex-direction: column;
+  }
+
+  .card__item {
+    width: 100%;
+    margin: 30px 0 0;
+  }
+
+  .card__item-image {
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .wp-post-image{
+    width: 100%;
+    object-fit: cover;
+  }
+  .sidebar {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .banner {
+    width: 100%;
+  }
+
+  .banner__image {
+    width: 100%;
+  }
+}
